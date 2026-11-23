@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: filson-pro, sans-serif;
     font-weight: 300;
     line-height: 2.4rem;
@@ -113,7 +113,6 @@ section{
 .btn{
 
     display: inline-block;
-    border: var(--white) 2px solid;
     text-transform: uppercase;
     color: var(--black);
     font-size: 1.6rem;
@@ -140,7 +139,7 @@ header{
     z-index: 99;
     top:0;
     left:0;
-    padding: 2rem 3rem;
+    padding: 1rem 5rem;
     .partners,
     .nav-cta-container,
     .nav-cta,
@@ -168,13 +167,37 @@ header{
         
         .nav-cta{
             align-items: center;
-            gap: 1rem;
-            .lisio{
-                width: 40px;
+            gap: 3rem;
+            
+            .menu{
+                font-size: 2rem;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap:1rem;
+                color: var(--white);
+                .hbg{
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid var(--white);
+                    position: relative;
+
+                    span{
+                        position: absolute;
+                        width: 60%;
+                        height: 3px;
+                        background-color: var(--white);
+                        top: calc( var(--pos) * 6px );
+                        left:0;
+                        right: 0;
+                        margin: 0 auto;
+                        
+
+                    }
+
+                }
             }
-            .hbg{
-                width: 30px;
-            }
+
         }
 
     }
