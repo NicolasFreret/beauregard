@@ -8,7 +8,8 @@
     --base-px:10px;
     --grid-gap:2rem;
 
-    --red:#92302B;
+    --yellow:#FFFF99;
+    --red:#FF6666;
     --black:#000;
     --white:#fff;
 }
@@ -23,6 +24,8 @@ body{
     font-weight: 300;
     line-height: 2.4rem;
 }
+
+
 
 .container{
     width: 1300px;
@@ -83,6 +86,15 @@ body{
     grid-column: span 12;
 }
 
+.wallpaper{
+    position: absolute;
+    inset:0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -3;
+}
+
 img,
 video{
     width: 100%;
@@ -93,28 +105,41 @@ a{
     text-decoration: none;
 }
 
+section{
+    position: relative;
+    padding: 3% 0;
+}
+
 .btn{
+
     display: inline-block;
     border: var(--white) 2px solid;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--black);
     font-size: 1.6rem;
     font-weight: 700;
     padding: 1rem 3rem;
-    background-color: transparent;
+    background-color: var(--yellow);
     transition: color .5s ease, 
     background-color .5s ease;
 
-    &:hover{
+    &.white{
         background-color: var(--white);
-        color: var(--red);
+    }
+
+    &:hover{
+        background-color: var(--red);
     }
 }
 
 
 
 header{
-    background-color: var(--red);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top:0;
+    left:0;
     padding: 2rem 3rem;
     .partners,
     .nav-cta-container,
@@ -159,6 +184,10 @@ header{
 
 
 
+
+.hero{
+    height: 100vh;
+}
 
 
 
