@@ -128,6 +128,17 @@ section{
     padding: 3% 0;
 }
 
+
+.h1{
+    font-size: 11rem;
+    line-height: 9rem;
+    text-transform: uppercase;
+    font-family: RLGrotBold, sans-serif;
+    font-weight: 800;
+    display: none;
+}
+
+
 .btn{
     font-family: RLGrotBold, sans-serif;
     display: inline-block;
@@ -152,15 +163,37 @@ section{
 
 
 
+
+
 header{
     position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 90;
     top:0;
     left:0;
     padding: 1rem 8rem;
     justify-content: end;
     align-items: center;
+
+    &.open{
+        nav{
+            height: 100vh;
+        }
+    }
+
+    nav{
+        position: absolute;
+        width: 100%;
+        height: 0vh;
+        background-color: var(--white);
+        top:0;
+        left:0;
+        z-index: 95;
+        transition: height .5s ease
+
+    }
+
+    
     
     &,
     .logo,
@@ -168,12 +201,14 @@ header{
     .nav-cta,
     .hbg{
         display: flex;
+        z-index: 100;
     }
 
     .logo{
         position: absolute;
         top:-115px;
         left: 6rem;
+        z-index: 500;
         a{
             display: flex;
             flex-flow: column;
@@ -294,14 +329,6 @@ header{
 }
 
 
-.h1{
-    font-size: 11rem;
-    line-height: 9rem;
-    text-transform: uppercase;
-    font-family: RLGrotBold, sans-serif;
-    font-weight: 800;
-    display: none;
-}
 
 
 .hero{

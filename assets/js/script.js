@@ -2,16 +2,25 @@ const div = document.createElement('div')
 const header = document?.querySelector('header')
 const h1 = document.querySelector('h1')
 const logoContainer = header?.querySelector('.logo')
-const videoPlayer = document?.querySelector('.hero video')
+const videoPlayer = document?.querySelector('.hero video'),
+menuMobile = header?.querySelector('.hbg')
 
-const a = document.createElement('a'),
-linkContainer = header?.querySelector('.nav-cta')
-if(linkContainer){
-    a.href = 'https://www.mydigitalschool.com/'
-    a.innerText = 'Lien'
-    a.target = "_blank"
-    linkContainer.append(a)
+if(menuMobile){
+    menuMobile.addEventListener('click', function(e){
+        header.classList.toggle('open')
+    })
 }
+
+//Ajout de lien sur la page
+
+// const a = document.createElement('a'),
+// linkContainer = header?.querySelector('.nav-cta')
+// if(linkContainer){
+//     a.href = 'https://www.mydigitalschool.com/'
+//     a.innerText = 'Lien'
+//     a.target = "_blank"
+//     linkContainer.append(a)
+// }
 
 
 
