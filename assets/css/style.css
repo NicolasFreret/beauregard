@@ -7,11 +7,26 @@
 :root{
     --base-px:10px;
     --grid-gap:2rem;
+    --content-gap:2rem;
 
     --yellow:#FFFF99;
     --red:#FF6666;
-    --black:#000;
+    --black:#000014;
     --white:#fff;
+}
+
+@font-face{
+    font-family:RLGrotBold;
+    src:url(../fonts/RLGrotTRIAL-Bold-73oKmIB.woff2) format("woff2");
+    font-style:normal;
+    font-display: swap
+}
+
+@font-face{
+    font-family:RLGrotReg;
+    src:url(../fonts/RLGrotTRIAL-Regular-ioOcLgM.woff2) format("woff2");
+    font-style:normal;
+    font-display: swap
 }
 
 html{
@@ -20,12 +35,15 @@ html{
 
 body{
     font-size: 1.6rem;
-    font-family: filson-pro, sans-serif;
+    font-family: "LINE Seed JP", sans-serif;
     font-weight: 300;
     line-height: 2.4rem;
 }
 
-
+.content > *:not(:last-child),
+.container > *:not(:last-child){
+    margin-bottom: var(--content-gap);
+}
 
 .container{
     width: 1300px;
@@ -111,13 +129,14 @@ section{
 }
 
 .btn{
-
+    font-family: RLGrotBold, sans-serif;
     display: inline-block;
     text-transform: uppercase;
     color: var(--black);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     padding: 1rem 3rem;
+    letter-spacing: .144rem;
     background-color: var(--yellow);
     transition: color .5s ease, 
     background-color .5s ease;
@@ -139,25 +158,25 @@ header{
     z-index: 99;
     top:0;
     left:0;
-    padding: 1rem 5rem;
-    .partners,
+    padding: 1rem 8rem;
+    justify-content: end;
+    align-items: center;
+    
+    &,
+    .logo,
     .nav-cta-container,
     .nav-cta,
-    .lisio,
     .hbg{
         display: flex;
     }
 
-    .partners{
-        justify-content: space-between;
-        align-items: center;
-        .cm{
-            width: min(100%, 300px);
-        }
-
-        .fi{
-            width: 50px;
-            height: 50px;
+    .logo{
+        position: absolute;
+        top:-115px;
+        left: 6rem;
+        a{
+            display: flex;
+            flex-flow: column;
         }
     }
 
@@ -170,6 +189,7 @@ header{
             gap: 3rem;
             
             .menu{
+                font-family: RLGrotBold, sans-serif;
                 font-size: 2rem;
                 font-weight: 600;
                 display: flex;
@@ -177,7 +197,7 @@ header{
                 gap:1rem;
                 color: var(--white);
                 position: relative;
-                width: 70px;
+                width: 60px;
                 transition: color .3s ease;
                 
                 p{
@@ -274,11 +294,42 @@ header{
 }
 
 
-
+.h1{
+    font-size: 11rem;
+    line-height: 9rem;
+    text-transform: uppercase;
+    font-family: RLGrotBold, sans-serif;
+    font-weight: 800;
+}
 
 
 .hero{
+    --content-gap:4rem;
     height: 100vh;
+    font-family: RLGrotBold, sans-serif;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    .date{
+        font-size: 5rem;
+        span{
+            color: var(--red) !important;
+        }
+    }
+    .place{
+        font-family:RLGrotReg;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    figure{
+        width: 250px;
+        margin-inline: auto;
+        position: relative;
+        bottom: 20px;
+    }
 }
 
 
