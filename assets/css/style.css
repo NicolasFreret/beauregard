@@ -140,6 +140,12 @@ section{
     font-weight: 800;
 }
 
+.h3{
+    font-family: RLGrotBold;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
 
 .btn{
     font-family: RLGrotBold, sans-serif;
@@ -372,7 +378,9 @@ header{
 
 
 
-
+.lastActus{
+    background-color: var(--blue);
+}
 
 
 
@@ -390,6 +398,7 @@ header{
     .wrapper{
         overflow: hidden;
         width: 100%;
+        padding-block: 10rem;
     }
 
 
@@ -402,6 +411,62 @@ header{
         display: flex;
         flex:1;
         min-width: 100%;
+        gap:3.5rem;
+    }
+
+    article{
+        --content-gap: .5rem;
+        background-color: var(--white);
+        padding: 1rem;
+        flex:1;
+        max-width: calc( 100% / 3 );
+        position: relative;
+
+        &:hover{
+            img{
+                scale:1.1;
+            }
+        }
+
+        &:nth-child(2){
+            top:20px;
+        }
+
+        &:last-child{
+            top:40px;
+        }
+
+       
+
+        .text_icon{
+            margin-top: 2rem;
+            display: flex;
+            padding:0 2rem;
+            
+
+            .icon{
+                flex-basis: 80px;
+            }
+
+            p{
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+        }
+
+        figure{
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            
+
+            img{
+                height: 100%;
+                object-fit: cover;
+                transition: scale .3s ease;
+            }
+        }
+        
     }
 }
 
